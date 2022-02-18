@@ -142,7 +142,7 @@ SELECT COUNT(*) AS Worldwide_Sales FROM `videogamesales` WHERE publisher='Ninten
    Weergave van records 0 - 24 (93 totaal, Query duurde 0,0007 seconden.)
 
 
-SELECT name,year FROM `videogamesales` WHERE genre='Racing' AND publisher='Nintendo' OR publisher='Activision';
+SELECT name,year FROM `videogamesales` WHERE genre='Racing' OR publisher='Activision' AND publisher='Nintendo';
 
 
 name	year	
@@ -177,7 +177,7 @@ SELECT ROUND(AVG(NA_Sales)) AS Gemiddelde_Noord_Amerika, ROUND(AVG(EU_Sales)) AS
 -- Opdracht 11
 DELETE FROM videogamesales WHERE name='Halo 2' AND platform='XB';
 -- Opdracht 12
-DELETE FROM videogamesales WHERE year='2012' OR publisher='Ubisoft';
+DELETE FROM videogamesales WHERE year='2012' AND publisher='Ubisoft';
 -- Opdracht 13
 DELETE FROM videogamesales WHERE genre='Adventure' AND publisher='Nintendo';
 -- Opdracht 14
